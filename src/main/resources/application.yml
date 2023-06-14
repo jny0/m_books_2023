@@ -3,9 +3,10 @@ spring:
     active: dev
     include:
       - base-addi
-  sql:
-    init:
-      mode: always
+  autoconfigure:
+    exclude:
+      - org.springframework.boot.autoconfigure.data.redis.RedisAutoConfiguration
+      - org.springframework.boot.autoconfigure.session.SessionAutoConfiguration
   datasource:
     driver-class-name: org.mariadb.jdbc.Driver
   batch:
@@ -33,11 +34,10 @@ spring:
           auth: true
           starttls:
             enable: true
-jpa:
-  defer-datasource-initialization:logging:
+logging:
   level:
     root: INFO
-    com.ll.exam.mbooks.app: DEBUG
+    com.ll.mbooks.app: DEBUG
     org.hibernate.orm.jdbc.bind: TRACE
     org.hibernate.orm.jdbc.extract: TRACE
 custom:

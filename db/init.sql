@@ -1,18 +1,10 @@
-#
-테스트 DB 생성
-DROP
-DATABASE IF EXISTS mbooks_test;
-CREATE
-DATABASE mbooks_test;
-USE
-mbooks_test;
+# 테스트 DB 생성
+DROP DATABASE IF EXISTS mbooks__test;
+CREATE DATABASE mbooks__test;
+USE mbooks__test;
 
-#
-개발 DB 생성
-DROP
-DATABASE IF EXISTS mbooks_dev;
-CREATE
-DATABASE mbooks_dev;
-USE
-mbooks_dev;
+# 개발 DB 생성
+DROP DATABASE IF EXISTS mbooks__dev;
+CREATE DATABASE mbooks__dev;
+USE mbooks__dev;
 
